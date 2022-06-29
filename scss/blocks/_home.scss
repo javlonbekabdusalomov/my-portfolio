@@ -1,0 +1,113 @@
+// home
+
+.home-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    height: 100vh;
+}
+.home-content h3{
+    font-size: 50px;
+    color: var(--black);
+    text-transform: uppercase;
+}
+.home-content p{
+    font-size: 30px;
+    color: var(--green);
+    padding-bottom: 30px;
+}
+.home-content .home-btn{
+    @include site-btn;
+}
+.home-share{
+    position: relative;
+    top: 5rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+
+}
+.home-share a{
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    line-height: 60px;
+    margin: 5px;
+    color: var(--black);
+    &:hover{
+        box-shadow: var(--box-shadow-inset);
+        color: var(--green);
+
+    }
+
+}
+
+// top fixed
+
+
+.scroll-btn{
+    position: fixed;
+    bottom: -100%;
+    right: 15px;
+    transition: all .4s ease;
+    background-color: var(--skin-color);
+    border: 1px solid var(--skin-color);
+    border-radius: 5px;
+    i{
+        color: var(--green);
+        font-size: 30px;
+        box-shadow: var(--box-shadow);
+        padding: 6px 12px;
+        border-radius: 50%;
+    }
+    
+    a{
+        padding: 10px;
+        display: block;
+    }
+    &:hover i{
+        box-shadow: var(--box-shadow-inset);
+    }
+}
+.btn-block{
+    opacity: 1;
+    bottom: 50px;
+}
+@media (max-width: 420px){
+    .home-content h3{
+        font-size:38px;
+
+    }
+    .home-content p{
+        font-size:24px;
+        
+    }
+    .home-share{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   .home-section{
+       padding-top: 20px;
+   }
+   
+    
+}
+
+
+@media (max-width: 320px){
+   
+    .home-share{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    html{
+        font-size: 50%;
+    }
+    
+}

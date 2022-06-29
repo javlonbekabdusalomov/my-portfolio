@@ -1,0 +1,132 @@
+// header
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: var(--bg-color);
+    width: 300px;
+    border-right: var(--border);
+    height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+.user-img{
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../../img/Javlonbek.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+.user h3{
+    font-size: 1.5rem;
+    color: var(--black);
+}
+.user p{
+    font-size: 1rem;
+    color: var(--green);
+}
+.navbar a{
+    display: block;
+    margin: 1.7rem 0;
+    // font-size: 1.2rem;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+    padding: 7px;
+    color: var(--black);
+    &:hover{
+        box-shadow: var(--box-shadow-inset);
+    }
+}
+.menu-btn{
+   position: fixed;
+   top: 20px;
+   left: 20px;
+   z-index: 1000;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   font-size: 20px;
+   cursor: pointer;
+   box-shadow: var(--box-shadow);
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: var(--black);
+   display: none;
+   &:hover{
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+    }
+}
+.theme-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    // display: none;
+    &:hover{
+     color: var(--green);
+     box-shadow: var(--box-shadow-inset);
+     }
+}
+.active{
+    color: var(--green) !important;
+    
+    
+}
+
+
+
+
+// media query
+
+@media (max-width: 992px){
+    html{
+        font-size: 72%;
+    }
+    .body-section{
+        padding-left: 0;
+    }
+    .header{
+        left: -100%;
+        
+    }
+    .header.active{
+        left: 0%;
+        transition: all .4s linear;
+    }
+    #menu-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 60%;
+    }
+    .header{
+        width: 100%;
+        border-right: 0;
+        
+    }
+    
+}
